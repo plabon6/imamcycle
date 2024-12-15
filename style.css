@@ -185,6 +185,7 @@ header{
     display: none;
     padding: 5px 0;
     border-top: 3px solid red;
+    border-radius: 5px;
 }
 
 .bottomHeader > ul > li:hover .submenu {
@@ -293,15 +294,24 @@ header{
         padding-bottom: 0;
     }
 
+    .bottomHeader > ul > li:hover .submenu {
+        display: block;
+    }
+
     .mainCategory{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 20px 0;
+        padding: 10px 0;
     }
 
     .mainCategory > i{
         display: block;
+        transition: 0.3s ease;
+    }
+
+    .mainCategory:hover > i{
+        transform: rotate(180deg);
     }
 
     .bottomHeader > ul > li:nth-child(1){
@@ -311,18 +321,22 @@ header{
         flex-direction: row;
         border-bottom: 1px solid var(--fourth-color);
         padding-bottom: 20px;
+        margin-bottom: 10px;
     }
     
     .bottomHeader ul > li:nth-child(1) > i{
         font-size: var(--fs-medium);
     }
-
+            
     .submenu{
         width: auto;
-        display: block;
         position: static;
         border: none;
         padding: 0;
+    }
+
+    .submenu li{
+        padding-left: 20px;
     }
 
     .submenu li:hover{
@@ -332,10 +346,6 @@ header{
 }
 
 @media only screen and (max-width: 962px){
-
-    header{
-        padding: 10px;
-    }
 
     .navRight{
         display: none;
