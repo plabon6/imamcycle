@@ -26,6 +26,7 @@ document.addEventListener('click', function(event) {
 
 const submenu = document.getElementsByClassName('submenu');
 const cat = document.getElementsByClassName('category')[0].children;
+const mainCat = document.getElementsByClassName('mainCategory');
 
 for (let i = 1; i < cat.length; i++) {
     cat[i].addEventListener('mouseover', function () {
