@@ -35,7 +35,7 @@ for (let i = 1; i < cat.length; i++) {
         }
     })
 
-    cat[i].addEventListener('click', function () {
+    mainCat[i-1].addEventListener('click', function () {
         if (window.innerWidth <= 1280) {
             if (submenu[i - 1].style.display === 'block') {
                 submenu[i - 1].style.display = 'none';
