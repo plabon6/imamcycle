@@ -230,6 +230,7 @@ header{
     height: 100%;
     background-color: rgba(0, 0, 0, 0.432);
     display: none;
+    z-index: 9998;
 }
 
 #offCanvas{

@@ -98,3 +98,36 @@ for (let i = 0; i < mobSubCat.length; i++) {
     })
     
 };
+
+const placeholders = ["bicycle", "handlebar", "crankset", "chain", "tube", "tire"];
+
+const searchInput = document.getElementById("searchInput");
+
+let currentTextIndex = 0;
+let currentCharIndex = 0;
+
+function typePlaceholder() {
+  const currentText = placeholders[currentTextIndex];
+  searchInput.setAttribute("placeholder", currentText.slice(0, currentCharIndex++));
+
+  if (currentCharIndex > currentText.length) {
+    setTimeout(deletePlaceholder, 1000); // Pause before deleting
+  } else {
+    setTimeout(typePlaceholder, 150); // Typing speed
+  }
+}
+
+function deletePlaceholder() {
+  const currentText = placeholders[currentTextIndex];
+  searchInput.setAttribute("placeholder", currentText.slice(0, --currentCharIndex));
+
+  if (currentCharIndex === 0) {
+    currentTextIndex = (currentTextIndex + 1) % placeholders.length; // Move to next word
+    setTimeout(typePlaceholder, 500); // Pause before typing new word
+  } else {
+    setTimeout(deletePlaceholder, 100); // Deleting speed
+  }
+}
+
+// Start the typing animation
+typePlaceholder();
