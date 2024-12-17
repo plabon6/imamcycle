@@ -242,6 +242,7 @@ header{
     padding: 20px;
     overflow: auto;
     transition: 0.3s ease-in-out;
+    z-index: 9999;
 }
 
 .topAside{
@@ -310,6 +311,10 @@ header{
     transition: 0.4s ease;
 }
 
+.navigation{
+    display: none;
+}
+
 @media only screen and (max-width: 1280px){
     header{
         padding: 20px;
@@ -331,4 +336,39 @@ header{
     .navRight{
         display: none;
     }
+
+    .cart{
+        bottom: 70px;
+    }
+
+    .navigation{
+        position: fixed;
+        display: flex;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 61px;
+        background: var(--primary-color);
+        z-index: 999;
+        box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.2), 0 -1px 0 rgba(255, 255, 255, 0.2);
+        flex: 1 1 auto;
+        width: 100%;
+        padding: 0;
+    }
+    .navigation > a{
+        float: none;
+        display: flex;
+        padding-left: 0;
+        flex-direction: column;
+        flex: 0 0 20%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        color: var(--third-color);
+    }
+    .navigation > a > label{
+        font-size: var(--fs-lite);
+        margin-top: 5px;
+    }
+
 }
