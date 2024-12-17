@@ -1,0 +1,53 @@
+{
+    "categories": [
+      {
+        "name": "Bicycle Frame",
+        "subcategories": ["Wissco", "Boarse", "Yoshoka", "Extention", "Twitter", "Cycletrack", "Kinesis", "Dartmoor", "Format", "Valoce", "Giant", "Phoenix"]
+      },
+      {
+        "name": "Mountain Bike",
+        "subcategories": ["Trek", "Veloce", "Kaze"]
+      },
+      {
+        "name": "Bicycle Suspension",
+        "subcategories": ["Straight", "Tapered"]
+      },
+      {
+        "name": "Bicycle Parts",
+        "subcategories": ["Wheel Parts", "Handlebars", "Seatpost Clamp", "Extended Handlebar", "Handlebar Stem", "Bicycle Headset", "Headset Spacer", "Bicycle Seatpost", "Bicycle Groupsets", "Shifter"]
+      },
+      {
+        "name": "Brake Parts",
+        "subcategories": ["Brake Sets", "Brake Adapter", "Caliper", "Hose", "Brake Lever Cover", "Brake Pad", "Bleeding Kit", "Cable Housing", "Rotor", "Rotor Adapter"]
+      },
+      {
+        "name": "Drivetrain Parts",
+        "subcategories": ["BB Set", "Crank", "Chain", "Pedals", "Chain Guide", "Cassette Cog", "Chain Link", "Chain Tensioner", "Chainring", "Crank Cover", "Derailleur Hanger", "Freewheel & Cassette", "Front Derailleur", "Rear Derailleur", "Jockey Wheel/Pulley"]
+      },
+      {
+        "name": "Accessories",
+        "subcategories": ["Stands & Storage", "Bicycle Cover", "Carrier", "Frame Cover", "Grips", "Looking Mirrors", "Speedometer", "Speedometer Case", "Foot Pegs", "Mobile Holder", "Mount & Holders", "Saddle Shock Absorber", "Straps & Clips", "Saddle", "Seat Covers", "Water Bottle", "Washer"]
+      },
+      {
+        "name": "Tools",
+        "subcategories": ["Tools", "Bicycle Pumper"]
+      },
+      {
+        "name": "Outer Wear",
+        "subcategories": ["Gloves", "Bandana", "Strap", "Sunglasses", "Hand Sleeve", "Helmet"]
+      },
+      {
+        "name": "Horns & Lights",
+        "subcategories": ["Bicycle Bells", "Horn", "Bicycle Lights"]
+      },
+      {
+        "name": "Lubricant",
+        "subcategories": ["Gladiator", "Shimano"]
+      },
+      {
+        "name": "Lock & Safety",
+        "subcategories": ["Lock", "Security Alarm", "Mud Guard"]
+      }
+    ]
+  }
+  

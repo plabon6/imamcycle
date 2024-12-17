@@ -165,19 +165,7 @@ header{
     padding-bottom: 20px;
 }
 
-.bottomHeader> ul > li:nth-child(1){
-    display: none;
-}
-
-.mainCategory i{
-    display: none;
-}
-
-.category > li:hover{
-    color: var(--fourth-color);
-}
-
-.submenu{
+.bottomHeader .subcategory{
     position: absolute;
     background-color: var(--secondery-color);
     width: 180px;
@@ -189,17 +177,21 @@ header{
     border-radius: 5px;
 }
 
-.submenu li:hover{
+.bottomHeader .subcategory li:hover{
     background-color: var(--primary-color);
 }
 
-.submenu li{
+.bottomHeader .subcategory li{
     color: var(--third-color);
     padding: 5px 0 5px 8px;
 }
 
+.bottomHeader .mainCat:hover .subcategory{
+    display: block;
+}
+
 .cart{
-    position: absolute;
+    position: fixed;
     bottom: 20px;
     right: 20px;
     background-color: var(--primary-color);
@@ -240,6 +232,84 @@ header{
     display: none;
 }
 
+#offCanvas{
+    position: absolute;
+    top: 0;
+    height: calc(100vh - 40px);
+    background-color: var(--secondery-color);
+    left: -280px;
+    width: 240px;
+    padding: 20px;
+    overflow: auto;
+    transition: 0.3s ease-in-out;
+}
+
+.topAside{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topAside h2{
+    color: var(--fourth-color);
+}
+
+.close{
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--third-color);
+    font-size: var(--fs-medium);
+}
+
+#mobCategory{
+    margin-top: 30px;
+}
+
+#mobCategory > li{
+    font-size: var(--fs-normal);
+}
+
+#mobCategory > li:not(:last-child){
+    margin-bottom: 20px;
+}
+
+#mobCategory > li > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobSubCat{
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+}
+
+.mobSubCat.showSub{
+    max-height: 1500px;
+}
+
+.mobSubCat li > a{
+    color: #bbbbbb;
+    font-size: var(--fs-normal);
+
+}
+
+.mobSubCat li{
+    margin-top: 10px;
+}
+
+.downArrow{
+    transition: 0.4s ease;
+}
+
 @media only screen and (max-width: 1280px){
     header{
         padding: 20px;
@@ -252,85 +322,7 @@ header{
     }
 
     .bottomHeader{
-        position: absolute;
-        left: -290px;
-        top: 0;
-        margin: 0;
-        background-color: var(--secondery-color);
-        height: -webkit-fill-available;
-        padding: 20px;
-        transition: 0.3s ease;
-        overflow-y: scroll;
-    }
-
-    .bottomHeader::-webkit-scrollbar {
-        width: 0px;
-    }
-
-    .bottomHeader::-webkit-scrollbar-track{
-        background:black;
-    }
-
-    .bottomHeader::-webkit-scrollbar-thumb {
-        background: var(--primary-color); 
-        border-radius: 10px;
-        filter: opacity(0);
-    }
-
-    .bottomHeader > ul{
-        flex-direction: column;
-        align-items: flex-start;
-        font-size: var(--fs-normal);
-    }
-
-    .bottomHeader > ul > li{
-        display: flex;
-        flex-direction: column;
-        width: 250px;
-        justify-content: space-between;
-        padding-bottom: 0;
-    }
-
-    .mainCategory{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 0;
-    }
-
-    .mainCategory > i{
-        display: block;
-        transition: 0.3s ease;
-    }
-
-    .bottomHeader > ul > li:nth-child(1){
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-        border-bottom: 1px solid var(--fourth-color);
-        padding-bottom: 20px;
-        margin-bottom: 10px;
-    }
-    
-    .bottomHeader ul > li:nth-child(1) > i{
-        font-size: var(--fs-medium);
-    }
-            
-    .submenu{
-        width: auto;
-        position: static;
-        border: none;
-        padding: 0;
-    }
-
-    .submenu li{
-        padding-left: 20px;
-    }
-
-    .submenu li:hover{
-        background:none;
-        color: var(--fourth-color);
+        display: none;
     }
 }
 
@@ -339,23 +331,4 @@ header{
     .navRight{
         display: none;
     }
-
-    #mobileSearch{
-        flex-grow: 0;
-        padding: 0;
-        border-radius: 0;
-        background: none;
-    }
-
-    #mobileSearch > input{
-        display: none;
-    }
-
-    #mobileSearch > i{
-        color: var(--third-color);
-        cursor: pointer;
-        font-size: var(--fs-medium);
-    }
-
-
 }
