@@ -99,7 +99,7 @@ for (let i = 0; i < mobSubCat.length; i++) {
     
 };
 
-const placeholders = ["bicycle", "handlebar", "crankset", "chain", "tube", "tire"];
+const placeholders = ["bicycle", "handlebar", "crankset", "chain", "tube", "tire" , "shimano" , "derailleur"];
 
 const searchInput = document.getElementById("searchInput");
 
