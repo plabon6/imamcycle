@@ -76,19 +76,6 @@ for (let i = 0; i < mobSubCat.length; i++) {
 };
     }
 
-const offCanvas = document.getElementById("offCanvas")
-const overlay = document.getElementById('overlay');
-
-function showMenu() {
-    offCanvas.style.left = 0;
-    overlay.style.display = 'block';
-};
-
-function hideMenu() {
-    offCanvas.style.left = '-280px';
-    overlay.style.display = 'none';
-};
-
 const mobSubCat = document.getElementsByClassName('mobSubCat')
 const downArrow = document.getElementsByClassName('downArrow')
 
@@ -97,6 +84,19 @@ for (let i = 0; i < mobSubCat.length; i++) {
         mobSubCat[i].classList.add('showSub');  
     })
     
+};
+
+const offCanvas = document.getElementById("offCanvas")
+const overlay = document.getElementById('overlay');
+
+window.showMenu = function () {
+    offCanvas.style.left = 0;
+    overlay.style.display = 'block';
+};
+
+window.hideMenu = function () {
+    offCanvas.style.left = '-280px';
+    overlay.style.display = 'none';
 };
 
 const placeholders = ["bicycle", "handlebar", "crankset", "chain", "tube", "tire" , "shimano" , "derailleur"];
@@ -131,3 +131,12 @@ function deletePlaceholder() {
 
 // Start the typing animation
 typePlaceholder();
+
+import { initializeCarousel } from './carousel.js';
+
+// Initialize the carousel
+initializeCarousel({
+  slidesSelector: '.slides',
+  dotsContainerSelector: '.dots',
+  slideDuration: 5000,
+});
