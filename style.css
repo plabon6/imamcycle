@@ -4,6 +4,7 @@
     --third-color: #fff;
     --fourth-color: #9b9b9b;
     --fifth-color: #ebebeb;
+    --sixth-color: #ffdfe1;
     --primary-hover: #b30712;
     --body-color: #F2F3F8;
     --fs-lite: 12px;
@@ -51,10 +52,15 @@ a{
 header{
     background-color: var(--secondery-color);
     color: var(--third-color);
-    padding: 20px 20px 0;
+}
+
+.topHeader , .bottomHeader{
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .topHeader{
+    padding-top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -148,8 +154,8 @@ header{
     margin-left: 5px;
 }
 
-.bottomHeader{
-    margin-top: 25px;
+.stickyHeader{
+    position: sticky;
 }
 
 .bottomHeader > ul{
@@ -174,12 +180,23 @@ header{
     background-color: var(--secondery-color);
     width: 180px;
     top: 100%;
-    left: 0;
     display: none;
     padding: 5px 0;
     border-top: 3px solid red;
     border-radius: 5px;
     z-index: 10;
+}
+
+.leftSub{
+    left: 0;
+}
+
+.rightSub{
+    right: 0;
+}
+
+.bottomHeader > ul > li{
+    padding-top: 20px;
 }
 
 .bottomHeader .subcategory li:hover{
@@ -195,6 +212,26 @@ header{
     display: block;
 }
 
+#bottomHead{
+    position: fixed;
+    background-color: #1A1A1D;
+    z-index: 3;
+    max-width: 100%;
+    margin-top: 0;
+    padding: 0 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#bottomHead > ul{
+    max-width: 1366px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0
+}
+   
+
 .cart{
     position: fixed;
     bottom: 20px;
@@ -208,6 +245,7 @@ header{
     justify-content: center;
     align-items: center;
     padding: 5px;
+    z-index: 10;
 }
 
 .cartCount{
@@ -330,7 +368,7 @@ main{
 /* Carousel CSS Here */
 
 #allCarousels{
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 
@@ -428,7 +466,7 @@ main{
 /* Featured Category Section Here */
 
 .featuredCat{
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .featuredSec h2, .featuredSec h4{
@@ -478,9 +516,101 @@ main{
     margin-top: 10px;
 }
 
-@media only screen and (max-width: 1280px){
-    header{
-        padding: 20px;
+/* Product Card Section CSS Here */
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.productCard{
+    position: relative;
+    background-color: var(--third-color);
+    border-radius: 7px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+
+.pLabel{
+    position: absolute;
+    background-color: var(--primary-color);
+    color: var(--third-color);
+    left: 0;
+    top: 30px;
+    padding: 5px;
+    font-size: var(--fs-lite);
+    border-radius: 0 50px 50px 0;
+}
+
+.imgCard img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.PName{
+    font-size: var(--fs-medium);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.pInfo{
+    margin: 10px 0;
+}
+
+.pInfo ul{
+    color: #686868;
+    font-size: var(--fs-normal);
+    margin-bottom: 10px;
+    height: 85px;
+    overflow: hidden;
+    padding-left: 16px;
+}
+
+.pInfo ul > li{
+    list-style-type: disc;
+}
+
+.pInfo hr{
+    border: none;
+    border-top: 1px solid var(--fourth-color);
+}
+
+.price{
+    text-align: center;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: var(--fs-medium);
+    margin: 10px 0;
+}
+
+.oldPrice{
+    color: #686868;
+    text-decoration: line-through;
+    font-size: var(--fs-normal);
+    font-weight: 600;
+}
+
+.buy{
+    width: 100%;
+    color: var(--primary-color);
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    font-family: "Inter", serif;
+    background-color: var(--sixth-color);
+}
+
+.buy:hover{
+    color: var(--third-color);
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1298px){
+    .topHeader{
+        padding-bottom: 20px;
     }
 
     .topHeader > i{
@@ -491,6 +621,10 @@ main{
 
     .bottomHeader{
         display: none;
+    }
+
+    .products{
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
@@ -504,6 +638,10 @@ main{
 @media only screen and (max-width: 1093px){
     .featuredCat{
         grid-template-columns: repeat(6, auto);
+    }
+
+    .products{
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -572,6 +710,10 @@ main{
     .featuredCat{
         grid-template-columns: repeat(4, auto);
     }
+
+    .products{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media only screen and (max-width: 617px){
@@ -590,6 +732,13 @@ main{
     .catTitle{
         font-size: var(--fs-lite);
     }
+}
+
+@media only screen and (max-width: 480px){
+    .products{
+        grid-template-columns: 1fr;
+    }
+
 }
 
 @media only screen and (max-width: 458px){

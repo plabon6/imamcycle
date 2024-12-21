@@ -47,7 +47,6 @@ fetch('Data/product.json')
     // Create the subcategories list
         const subcategoryList = document.createElement("ul");
         subcategoryList.className = "subcategory";
-
         category.subcategories.forEach(subcategory => {
           const subcategoryItem = document.createElement("li");
           subcategoryItem.textContent = subcategory;
@@ -56,6 +55,17 @@ fetch('Data/product.json')
 
         categoryLi.appendChild(subcategoryList);
         container.appendChild(categoryLi);
+
+        // Drop down Location
+        const allSubCat = document.getElementsByClassName("subcategory");
+        for (let i = 0; i < allSubCat.length; i++) {
+          if (i < Math.floor(allSubCat.length / 2)) {
+            allSubCat[i].classList.remove("rightSub");
+            allSubCat[i].classList.add("leftSub");
+          } else {
+            allSubCat[i].classList.add("rightSub");
+          }
+        }
       });
 
     const mobSubCat = document.getElementsByClassName('mobSubCat')
@@ -139,4 +149,13 @@ initializeCarousel({
   slidesSelector: '.slides',
   dotsContainerSelector: '.dots',
   slideDuration: 5000,
+});
+
+window.addEventListener("scroll", function () {
+  const bottomHead = document.getElementsByClassName("bottomHeader")
+  if (window.scrollY > 80) {
+    bottomHead[0].setAttribute("id", "bottomHead");
+  } else {
+    bottomHead[0].removeAttribute("id", "bottomHead");
+  }
 });
