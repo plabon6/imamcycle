@@ -268,7 +268,7 @@ header{
 }
 
 #overlay{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -281,7 +281,7 @@ header{
 }
 
 #offCanvas{
-    position: absolute;
+    position: fixed;
     top: 0;
     height: calc(100vh - 40px);
     background-color: var(--secondery-color);
