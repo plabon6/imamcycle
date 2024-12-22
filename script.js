@@ -188,7 +188,7 @@ fetch('Data/product.json')
   
       productCard.innerHTML = `
         <div class="pCardLabel">
-        ${pSave ? "" : `<label for="PName" class="pLabel">Save: ${(products[p].discount) - (products[p].price)}</label>`}
+        ${pSave ? "" : `<label for="PName" class="pLabel">Save: ${(products[p].discount) - (products[p].price)}TK</label>`}
         <label for="PName" class="pLabel coupon">Coupon: ICS20</label>
         </div>
         <div class="cardTop">
