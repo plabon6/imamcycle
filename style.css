@@ -1,5 +1,6 @@
 :root{
-    --primary-color: #E10A17;
+    /* --primary-color: #E10A17; */
+    --primary-color: #D81D33;
     --secondery-color: #1A1A1D;
     --third-color: #fff;
     --fourth-color: #9b9b9b;
@@ -10,10 +11,12 @@
     --fs-thin: 11px;
     --fs-lite: 12px;
     --fs-normal: 14px;
+    --fs-regular: 16px;
     --fs-medium: 18px;
     --fs-large: 20px;
     --fs-larger: 22px;
     --fw-regular: 400;
+    --fw-medium: 600;
 }
 
 *{
@@ -640,6 +643,52 @@ main{
     color: var(--fourth-color);
 }
 
+footer{
+    background-color: var(--secondery-color);
+    color: var(--third-color);
+    padding: 0 20px;
+}
+
+.topFooter{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 70px 0;
+    gap: 20px;
+}
+
+.topFooter h2{
+    margin-bottom: 24px;
+    font-size: var(--fs-medium);
+    font-weight: var(--fw-medium);
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+.topFooter li{
+    font-size: var(--fs-regular);
+    color: var(--fourth-color);
+}
+
+.topFooter li:hover{
+    color: var(--third-color);
+}
+
+.topFooter li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.topFooter .social{
+    font-size: var(--fs-larger);
+    color: var(--third-color);
+}
+.topFooter .social > a:not(:last-child){
+    margin-right: 10px;
+}
+
+.topFooter .brand{
+    font-size: var(--fs-medium);
+    color: var(--third-color);
+}
+
 @media only screen and (max-width: 1298px){
     .topHeader{
         padding-bottom: 20px;
@@ -674,6 +723,10 @@ main{
 
     .products{
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .topFooter{
+        grid-template-columns: repeat(2,1fr);
     }
 }
 
@@ -763,6 +816,11 @@ main{
 
     .catTitle{
         font-size: var(--fs-lite);
+    }
+
+    .topFooter{
+        text-align: center;
+        grid-template-columns: 1fr;
     }
 }
 
