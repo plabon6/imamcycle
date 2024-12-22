@@ -1,4 +1,4 @@
-fetch('Data/product.json')
+fetch('Data/category.json')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -159,3 +159,44 @@ window.addEventListener("scroll", function () {
     bottomHead[0].removeAttribute("id", "bottomHead");
   }
 });
+
+fetch('Data/product.json')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    renderProducts(data.products);
+  })
+  .catch(error => {
+    console.error('Error fetching JSON:', error);
+  });
+
+function renderProducts(products) {
+  const allProducts = document.getElementById("allProducts");
+  const productCard = document.createElement("div");
+  productCard.classList.add("productCard");
+  productCard.innerHTML = `<label for="PName" class="pLabel">Save: ${(products[0].discount) - (products[0].price)}</label>
+                    <div class="cardTop">
+                    <div class="imgCard">
+                        <img src="${products[0].image}" alt="Extention Potential" srcset="">
+                    </div>
+                        <h3 class="PName">${products[0].name}</h3>
+                    </div>
+                    <div class="pInfo">
+                        <ul>
+                            <li>${products[0].shortDescription[0]}</li>
+                            <li>${products[0].shortDescription[1]}</li>
+                            <li>${products[0].shortDescription[2]}</li>
+                            <li>${products[0].shortDescription[3]}</li>
+                        </ul>
+                    </div>
+                    <div class="cardBottom">
+                        <hr>
+                        <p class="price">${products[0].price} <span class="oldPrice">${products[0].discount}</span></p>
+                        <button class="buy"><i class="fa-solid fa-cart-plus"></i> Buy Now</button>
+                    </div>`
+  allProducts.appendChild(productCard);
+}

@@ -525,11 +525,17 @@ main{
 }
 
 .productCard{
+    display: grid;
+    padding: 20px;
     position: relative;
     background-color: var(--third-color);
     border-radius: 7px;
-    padding: 20px;
+    cursor:default;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+
+.productCard:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 5px 0px;
 }
 
 .pLabel{
@@ -541,6 +547,10 @@ main{
     padding: 5px;
     font-size: var(--fs-lite);
     border-radius: 0 50px 50px 0;
+}
+
+.imgCard{
+    margin-bottom: 10px;
 }
 
 .imgCard img{
@@ -556,14 +566,14 @@ main{
 }
 
 .pInfo{
-    margin: 10px 0;
+    display: grid;
+    margin: 10px 0 0;
 }
 
 .pInfo ul{
     color: #686868;
     font-size: var(--fs-normal);
     margin-bottom: 10px;
-    height: 85px;
     overflow: hidden;
     padding-left: 16px;
 }
@@ -572,7 +582,11 @@ main{
     list-style-type: disc;
 }
 
-.pInfo hr{
+.cardBottom{
+    align-self: end;
+}
+
+.cardBottom hr{
     border: none;
     border-top: 1px solid var(--fourth-color);
 }
