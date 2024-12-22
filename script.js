@@ -187,7 +187,10 @@ fetch('Data/product.json')
       const pSave = (products[p].discount) - (products[p].price) <= 0
   
       productCard.innerHTML = `
+        <div class="pCardLabel">
         ${pSave ? "" : `<label for="PName" class="pLabel">Save: ${(products[p].discount) - (products[p].price)}</label>`}
+        <label for="PName" class="pLabel coupon">Coupon: ICS20</label>
+        </div>
         <div class="cardTop">
           <div class="imgCard">
             <img src="${products[p].image}" alt="${products[p].name}" srcset="">

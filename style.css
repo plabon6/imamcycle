@@ -7,6 +7,7 @@
     --sixth-color: #ffdfe1;
     --primary-hover: #b30712;
     --body-color: #F2F3F8;
+    --fs-thin: 11px;
     --fs-lite: 12px;
     --fs-normal: 14px;
     --fs-medium: 18px;
@@ -538,15 +539,26 @@ main{
     box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 5px 0px;
 }
 
-.pLabel{
+.pCardLabel{
     position: absolute;
-    background-color: var(--primary-color);
-    color: var(--third-color);
     left: 0;
     top: 20px;
-    padding: 5px 10px 5px 5px;
-    font-size: var(--fs-lite);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+}
+
+.pLabel{
+    background-color: var(--primary-color);
+    color: var(--third-color);
+    padding: 3px 8px 3px 3px;
+    font-size: var(--fs-thin);
     border-radius: 0 50px 50px 0;
+}
+
+.coupon{
+    background-color: var(--secondery-color);
 }
 
 .imgCard{
