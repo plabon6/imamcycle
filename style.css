@@ -543,8 +543,8 @@ main{
     background-color: var(--primary-color);
     color: var(--third-color);
     left: 0;
-    top: 30px;
-    padding: 5px;
+    top: 20px;
+    padding: 5px 10px 5px 5px;
     font-size: var(--fs-lite);
     border-radius: 0 50px 50px 0;
 }
@@ -620,6 +620,12 @@ main{
     color: var(--third-color);
     background-color: var(--primary-color);
     cursor: pointer;
+}
+
+.buy:disabled{
+    cursor: default;
+    background-color: var(--fifth-color);
+    color: var(--fourth-color);
 }
 
 @media only screen and (max-width: 1298px){

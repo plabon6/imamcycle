@@ -174,29 +174,44 @@ fetch('Data/product.json')
     console.error('Error fetching JSON:', error);
   });
 
-function renderProducts(products) {
-  const allProducts = document.getElementById("allProducts");
-  const productCard = document.createElement("div");
-  productCard.classList.add("productCard");
-  productCard.innerHTML = `<label for="PName" class="pLabel">Save: ${(products[0].discount) - (products[0].price)}</label>
-                    <div class="cardTop">
-                    <div class="imgCard">
-                        <img src="${products[0].image}" alt="Extention Potential" srcset="">
-                    </div>
-                        <h3 class="PName">${products[0].name}</h3>
-                    </div>
-                    <div class="pInfo">
-                        <ul>
-                            <li>${products[0].shortDescription[0]}</li>
-                            <li>${products[0].shortDescription[1]}</li>
-                            <li>${products[0].shortDescription[2]}</li>
-                            <li>${products[0].shortDescription[3]}</li>
-                        </ul>
-                    </div>
-                    <div class="cardBottom">
-                        <hr>
-                        <p class="price">${products[0].price} <span class="oldPrice">${products[0].discount}</span></p>
-                        <button class="buy"><i class="fa-solid fa-cart-plus"></i> Buy Now</button>
-                    </div>`
-  allProducts.appendChild(productCard);
-}
+  function renderProducts(products) {
+    const allProducts = document.getElementById("allProducts");
+    for (let p = 0; p < products.length; p++) {
+      const productCard = document.createElement("div");
+      productCard.classList.add("productCard");
+  
+      // Check if the product quantity is 0
+      const isOutOfStock = products[p].quantity === 0;
+      // Check if the product discount is 0
+      const pDiscount = products[p].discount === 0
+      const pSave = (products[p].discount) - (products[p].price) <= 0
+  
+      productCard.innerHTML = `
+        ${pSave ? "" : `<label for="PName" class="pLabel">Save: ${(products[p].discount) - (products[p].price)}</label>`}
+        <div class="cardTop">
+          <div class="imgCard">
+            <img src="${products[p].image}" alt="${products[p].name}" srcset="">
+          </div>
+          <h3 class="PName">${products[p].name}</h3>
+        </div>
+        <div class="pInfo">
+          <ul>
+              <li>${products[p].shortDescription[0]}</li>
+              <li>${products[p].shortDescription[1]}</li>
+              <li>${products[p].shortDescription[2]}</li>
+              <li>${products[p].shortDescription[3]}</li>
+          </ul>
+        </div>
+        <div class="cardBottom">
+          <hr>
+          <p class="price">${products[p].price} <span class="oldPrice">${pDiscount ? "" : products[p].discount}</span></p>
+          <button class="buy ${isOutOfStock ? "disabled" : ""}" ${isOutOfStock ? "disabled" : ""}>
+            ${isOutOfStock ? "Out of Stock" : '<i class="fa-solid fa-cart-plus"></i> Buy Now'}
+          </button>
+        </div>
+      `;
+  
+      allProducts.appendChild(productCard);
+    }
+  }
+  

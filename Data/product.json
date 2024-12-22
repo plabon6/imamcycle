@@ -2,7 +2,7 @@
     "products": [
       {
         "name": "Extention Gameboy Dirt Jump Frame",
-        "shortDescription": ["Weight: 1.98KG","Geometric parameters: 1042mm (refer to wheelbase assembly pikeDJ)","Rear fork length: 366-385mm","Seat tube angle: 73 degrees"],
+        "shortDescription": ["Weight: 1.98KG","Geometric parameters: 1042mm","Rear fork length: 366-385mm","Seat tube angle: 73 degrees"],
         "longDescription": "The Wissco Road Frame is designed for speed and durability on paved roads. Made from lightweight aluminum, it offers excellent performance for competitive and recreational cyclists.",
         "price": 24500,
         "discount": 26500,
@@ -10,86 +10,87 @@
         "image": "./Assets/images/Products/Extention-Potential.webp"
       },
       {
-        "name": "Wissco Gravel Frame",
-        "shortDescription": "Durable frame for gravel adventures.",
-        "longDescription": "A high-performance Wissco frame designed to withstand the rugged conditions of gravel riding. Built with reinforced steel for superior durability.",
-        "price": 250.00,
-        "discount": 5,
-        "quantity": 10,
-        "image": "/images/wissco_gravel_frame.jpg"
+        "name": "Dartmoor 26 Player Bicycle Frame",
+        "shortDescription": ["WHEEL SIZE: 26in","MATERIAL: AL 6061-T6","WEIGHT: 2.2kg","SIZES: Short/Long","RECOMMENDED FORK TRAVEL: 90-130mm", "MAX CHAINRING SIZE: 32T", "MAX TIRE SIZE: 26×2.35″", "HUB SIZE: 135x10mm", "POST/CLAMP DIAMETER: 30.9mm/34.9mm", "HEADSET TYPE: IS42/IS52"],
+        "longDescription": "The Wissco Road Frame is designed for speed and durability on paved roads. Made from lightweight aluminum, it offers excellent performance for competitive and recreational cyclists.",
+        "price": 24500,
+        "discount": 26500,
+        "quantity": 0,
+        "image": "./Assets/images/Products/Dartmoor 26.webp"
       },
       {
-        "name": "Wissco Trail Frame",
-        "shortDescription": "Perfect for trail biking.",
-        "longDescription": "Experience unmatched control and stability with the Wissco Trail Frame, designed for mountain trails and off-road biking adventures.",
-        "price": 300.00,
-        "discount": 15,
-        "quantity": 8,
-        "image": "/images/wissco_trail_frame.jpg"
+        "name": "WISSCO 4X Soil Slope MTB Dirt Jump frame",
+        "shortDescription": ["head tube size: 44-56MM","Seat tube diameter: 30.8MM","Need to use single-speed chainwheel","Rear Derailleur can be installed with 8.9.10.11 speed","Rear HUB width: 135MM"],
+        "longDescription": "The Wissco Road Frame is designed for speed and durability on paved roads. Made from lightweight aluminum, it offers excellent performance for competitive and recreational cyclists.",
+        "price": 11500,
+        "discount": 13500,
+        "quantity": 15,
+        "image": "./Assets/images/Products/Wissco-4X-Frames.webp"
       },
       {
-        "name": "Wissco Aero Frame",
-        "shortDescription": "Aerodynamic frame for competitive cycling.",
-        "longDescription": "Optimized for speed, the Wissco Aero Frame reduces drag and enhances performance, making it ideal for competitive cyclists and speed enthusiasts.",
-        "price": 350.00,
-        "discount": 20,
-        "quantity": 5,
-        "image": "/images/wissco_aero_frame.jpg"
+        "name": "Boarse Sun 6.1 Dirt Jump Bicycle Frame",
+        "shortDescription": ["Weight: 5KG","Brand: Boarse","Size: 26in","Model: Sun 6.1"],
+        "longDescription": "The Wissco Road Frame is designed for speed and durability on paved roads. Made from lightweight aluminum, it offers excellent performance for competitive and recreational cyclists.",
+        "price": 11950,
+        "discount": 13500,
+        "quantity": 15,
+        "image": "./Assets/images/Products/Boarse-6.1.webp"
       },
       {
-        "name": "Wissco Aero Frame",
-        "shortDescription": "Aerodynamic frame for competitive cycling.",
-        "longDescription": "Optimized for speed, the Wissco Aero Frame reduces drag and enhances performance, making it ideal for competitive cyclists and speed enthusiasts.",
-        "price": 350.00,
-        "discount": 20,
-        "quantity": 5,
-        "image": "/images/wissco_aero_frame.jpg"
+        "name": "CYCLETRACK XC800 Bicycle Frame",
+        "shortDescription": ["Size: 27.5/29inch","Use: Mountain Bikes","Weight: 1.8kg","Model Number: XC800"],
+        "longDescription": "The Wissco Road Frame is designed for speed and durability on paved roads. Made from lightweight aluminum, it offers excellent performance for competitive and recreational cyclists.",
+        "price": 12000,
+        "discount": 0,
+        "quantity": 0,
+        "image": "./Assets/images/Products/Cycletrack-Red-Black.webp"
       },
       {
-        "name": "Wissco Aero Frame",
-        "shortDescription": "Aerodynamic frame for competitive cycling.",
-        "longDescription": "Optimized for speed, the Wissco Aero Frame reduces drag and enhances performance, making it ideal for competitive cyclists and speed enthusiasts.",
-        "price": 350.00,
-        "discount": 20,
-        "quantity": 5,
-        "image": "/images/wissco_aero_frame.jpg"
+        "name": "Kemeke 4X Earth Slope Bicycle Frame",
+        "shortDescription": ["Material: aluminum alloy","Weight: about 2.25kg","Fits seatpost: 30.9mm","Fit Headphones: TOP 44mm-Down 56mm"],
+        "longDescription": "The Wissco Road Frame is designed for speed and durability on paved roads. Made from lightweight aluminum, it offers excellent performance for competitive and recreational cyclists.",
+        "price": 12000,
+        "discount": 0,
+        "quantity": 0,
+        "image": "./Assets/images/Products/Kemek-Frame.webp"
       },
       {
-        "name": "Wissco Aero Frame",
-        "shortDescription": "Aerodynamic frame for competitive cycling.",
-        "longDescription": "Optimized for speed, the Wissco Aero Frame reduces drag and enhances performance, making it ideal for competitive cyclists and speed enthusiasts.",
-        "price": 350.00,
-        "discount": 20,
-        "quantity": 5,
-        "image": "/images/wissco_aero_frame.jpg"
+        "name": "BOARSE SUN 6.0 Bicycle Dirt Jump Bike Frame",
+        "shortDescription": ["Weight: 2.3 KG","Model: SUN 6.0","Size: 26in","Material: Aluminum Alloy 6061"],
+        "longDescription": "The Wissco Road Frame is designed for speed and durability on paved roads. Made from lightweight aluminum, it offers excellent performance for competitive and recreational cyclists.",
+        "price": 12500,
+        "discount": 13000,
+        "quantity": 15,
+        "image": "./Assets/images/Products/sun-1.webp"
       },
       {
-        "name": "Wissco Aero Frame",
-        "shortDescription": "Aerodynamic frame for competitive cycling.",
-        "longDescription": "Optimized for speed, the Wissco Aero Frame reduces drag and enhances performance, making it ideal for competitive cyclists and speed enthusiasts.",
-        "price": 350.00,
-        "discount": 20,
-        "quantity": 5,
-        "image": "/images/wissco_aero_frame.jpg"
+        "name": "Yoshoka Bicycle Frame Dirt Jump Bike",
+        "shortDescription": ["Brand: Yoshoka","Size: 26in","Rear opening size: 135 * 10mm fishtail","Head tube size: 44 / 56mm"],
+        "longDescription": "The Wissco Road Frame is designed for speed and durability on paved roads. Made from lightweight aluminum, it offers excellent performance for competitive and recreational cyclists.",
+        "price": 12500,
+        "discount": 14500,
+        "quantity": 0,
+        "image": "./Assets/images/Products/Yoshoka-Frame.webp"
       },
       {
-        "name": "Wissco Aero Frame",
-        "shortDescription": "Aerodynamic frame for competitive cycling.",
-        "longDescription": "Optimized for speed, the Wissco Aero Frame reduces drag and enhances performance, making it ideal for competitive cyclists and speed enthusiasts.",
-        "price": 350.00,
-        "discount": 20,
-        "quantity": 5,
-        "image": "/images/wissco_aero_frame.jpg"
+        "name": "Yoshoka Bicycle Frame Pursuit G2",
+        "shortDescription": ["Brand: Yoshoka","Size: 26","Rear opening size: 135 * 10mm fishtail","Head tube size: 44 / 56mm"],
+        "longDescription": "The Wissco Road Frame is designed for speed and durability on paved roads. Made from lightweight aluminum, it offers excellent performance for competitive and recreational cyclists.",
+        "price": 13500,
+        "discount": 15700,
+        "quantity": 15,
+        "image": "./Assets/images/Products/All-Frames.webp"
       },
       {
-        "name": "Wissco Aero Frame",
-        "shortDescription": "Aerodynamic frame for competitive cycling.",
-        "longDescription": "Optimized for speed, the Wissco Aero Frame reduces drag and enhances performance, making it ideal for competitive cyclists and speed enthusiasts.",
-        "price": 350.00,
-        "discount": 20,
-        "quantity": 5,
-        "image": "/images/wissco_aero_frame.jpg"
+        "name": "BOARSE Bicycle Dirt Jump Bike Frame 26",
+        "shortDescription": ["Weight: 2.5KG","Brand: Boarse","Material: Alloy","Seatpost: 34.9mm"],
+        "longDescription": "The Wissco Road Frame is designed for speed and durability on paved roads. Made from lightweight aluminum, it offers excellent performance for competitive and recreational cyclists.",
+        "price": 14990,
+        "discount": 15990,
+        "quantity": 15,
+        "image": "./Assets/images/Products/Boarse.webp"
       }
+      
     ]
   }
   
