@@ -102,11 +102,13 @@ const overlay = document.getElementById('overlay');
 window.showMenu = function () {
     offCanvas.style.left = 0;
     overlay.style.display = 'block';
+    document.getElementById("web").style.position = "fixed";
 };
 
 window.hideMenu = function () {
     offCanvas.style.left = '-280px';
     overlay.style.display = 'none';
+    document.getElementById("web").style.position = "static";
 };
 
 const placeholders = ["bicycle", "handlebar", "crankset", "chain", "tube", "tire" , "shimano" , "derailleur"];
