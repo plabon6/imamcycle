@@ -176,6 +176,8 @@ fetch('Data/product.json')
     console.error('Error fetching JSON:', error);
   });
 
+  const cartedProducts = document.getElementById("cartedProducts")
+
   function renderProducts(products) {
     const allProducts = document.getElementById("allProducts");
     for (let p = 0; p < products.length; p++) {
@@ -218,8 +220,35 @@ fetch('Data/product.json')
   
       allProducts.appendChild(productCard);
     }
-  }
+// Loop through "Buy Now" buttons and add event listeners
+const buyNowButtons = document.getElementsByClassName("buy");
+for (let i = 0; i < buyNowButtons.length; i++) {
+  buyNowButtons[i].addEventListener("click", function () {
+    const productList = document.createElement("li");
+    productList.setAttribute("class", "prod");
+    productList.innerHTML = `
+      <div>
+        <img class="cartImage" src="./Assets/images/Bicycle_Frame.webp" alt="">
+        <div>
+          <h4 class="cartProTitle">Wissco 4X Bicycle MTB Frames</h4>
+          <p class="cartProDetails">25000 X <span>1</span> = 25000</p>
+        </div>
+      </div>
+      <i class="fa-solid fa-trash productTrash"></i>
+    `;
 
+    // Add the product to the cart
+    cartedProducts.appendChild(productList);
+
+    // Add event listener for the trash icon
+    const trashButton = productList.querySelector(".productTrash");
+    trashButton.addEventListener("click", function () {
+      productList.remove();
+      console.log("Item removed from cart");
+    });
+  });
+}
+}
 
   //Cart Button and Menu Logic
 
@@ -241,4 +270,3 @@ fetch('Data/product.json')
     cartMenu.classList.remove("showCartMenu");
     cartBtn.classList.remove("moveCart");
   })
-  
