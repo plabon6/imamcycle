@@ -716,6 +716,7 @@ footer{
     flex-direction: column;
     transition: 0.3s ease-in-out;
 }
+
 .cartHead{
    background-color: var(--primary-color);
    color: var(--third-color);
@@ -727,12 +728,15 @@ footer{
 
 #cartList{
     flex-grow: 1;
+    overflow-y: auto;
 }
 
 .cartMenu li{
-    border-bottom: 1px solid var(--fourth-color);
     display: flex;
     align-items: flex-start;
+}
+.cartMenu li:not(:last-child){
+    border-bottom: 1px solid var(--fourth-color);
 }
 .cartMenu li, #total, #grandTotal, .couponCode{
     padding: 10px;
@@ -889,7 +893,7 @@ footer{
         right: 0;
         height: 61px;
         background: var(--primary-color);
-        z-index: 999;
+        z-index: 5;
         box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.2), 0 -1px 0 rgba(255, 255, 255, 0.2);
         flex: 1 1 auto;
         width: 100%;

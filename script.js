@@ -228,8 +228,13 @@ fetch('Data/product.json')
   const cartClose = document.getElementById("cartMenuClose")
 
   cartBtn.addEventListener("click",function () {
-    cartMenu.classList.add("showCartMenu");
-    cartBtn.classList.add("moveCart");
+    if (cartBtn.classList.value.includes("moveCart")) {
+      cartMenu.classList.remove("showCartMenu");
+    cartBtn.classList.remove("moveCart");
+    } else {
+      cartMenu.classList.add("showCartMenu");
+      cartBtn.classList.add("moveCart");
+    }
   })
 
   cartClose.addEventListener("click",function () {
