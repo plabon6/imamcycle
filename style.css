@@ -17,6 +17,9 @@
     --fs-larger: 22px;
     --fw-regular: 400;
     --fw-medium: 600;
+    /* Cart Button Custom Variables */
+    --cart-close: 20px;
+    --cart-open: 320px;
 }
 
 *{
@@ -46,6 +49,10 @@ li{
 a{
     color: unset;
     text-decoration: none;
+}
+
+button, input {
+    font-family: "Inter", serif;
 }
 
 .width{
@@ -239,7 +246,7 @@ header{
 .cart{
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: var(--cart-close);
     background-color: var(--primary-color);
     height: 40px;
     width: 40px;
@@ -250,6 +257,12 @@ header{
     align-items: center;
     padding: 5px;
     z-index: 10;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.moveCart{
+    right: calc(var(--cart-close) + var(--cart-open));
 }
 
 .cartCount{
@@ -277,7 +290,7 @@ header{
     height: 100%;
     background-color: rgba(0, 0, 0, 0.432);
     display: none;
-    z-index: 9998;
+    z-index: 6;
 }
 
 #offCanvas{
@@ -687,6 +700,134 @@ footer{
 .topFooter .brand{
     font-size: var(--fs-medium);
     color: var(--third-color);
+}
+
+/* Cart Offcanvas Menu */
+
+.cartMenu{
+    background-color: var(--third-color);
+    position: fixed;
+    right: calc( 0px - (var(--cart-open)));
+    top: 0;
+    height: 100vh;
+    width: var(--cart-open);
+    z-index: 7;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease-in-out;
+}
+.cartHead{
+   background-color: var(--primary-color);
+   color: var(--third-color);
+   padding: 10px 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+#cartList{
+    flex-grow: 1;
+}
+
+.cartMenu li{
+    border-bottom: 1px solid var(--fourth-color);
+    display: flex;
+    align-items: flex-start;
+}
+.cartMenu li, #total, #grandTotal, .couponCode{
+    padding: 10px;
+}
+
+#cartMenuClose{
+    cursor: pointer;
+}
+
+.cartMenu li>i{
+    right: 10px;
+    top: 10px;
+    font-size: var(--fs-lite);
+    color: var(--primary-color);
+    padding: 3px 0 0 5px;
+    cursor: pointer;
+}
+
+.cartMenu li>div{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.cartImage{
+    width: 50px;
+    height: auto;
+}
+
+.cartProTitle{
+    font-size: var(--fs-normal);
+    font-weight: var(--fw-medium);
+    margin-bottom: 5px;
+}
+
+.cartProDetails{
+    font-size: var(--fs-normal);
+    font-weight: var(--fw-regular);
+}
+
+#cartBottom{
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px 10px;
+}
+
+#total, #grandTotal{
+    display: flex;
+    justify-content: space-between;
+}
+
+.couponCode{
+    background-color: var(--sixth-color);
+    display: flex;
+}
+
+.couponCode > input{
+    flex-grow: 1;
+    margin-right: 10px;
+    border: none;
+    padding: 10px;
+}
+
+.couponCode > input:focus{
+    outline: none;
+}
+
+.couponCode > button{
+    background-color: var(--secondery-color);
+    color: white;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+.couponCode > button:hover{
+    background-color: var(--primary-color);
+}
+
+.couponCode > button , .couponCode > input{
+    border-radius: 5px;
+}
+
+.checkout{
+    width: 100%;
+    background-color: var(--secondery-color);
+    color: var(--third-color);
+    text-align: center;
+    padding: 10px 20px;
+    border: none;
+    font-size: var(--fs-medium);
+    font-weight: var(--fw-medium);
+    cursor: pointer;
+}
+
+.showCartMenu{
+    right: 0;
 }
 
 @media only screen and (max-width: 1298px){

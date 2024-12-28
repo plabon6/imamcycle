@@ -102,13 +102,13 @@ const overlay = document.getElementById('overlay');
 window.showMenu = function () {
     offCanvas.style.left = 0;
     overlay.style.display = 'block';
-    document.getElementById("web").style.position = "fixed";
+    document.body.style.overflow = "hidden";
 };
 
 window.hideMenu = function () {
     offCanvas.style.left = '-280px';
     overlay.style.display = 'none';
-    document.getElementById("web").style.position = "static";
+    document.body.style.overflow = "";
 };
 
 const placeholders = ["bicycle", "handlebar", "crankset", "chain", "tube", "tire" , "shimano" , "derailleur"];
@@ -219,4 +219,21 @@ fetch('Data/product.json')
       allProducts.appendChild(productCard);
     }
   }
+
+
+  //Cart Button and Menu Logic
+
+  const cartBtn = document.getElementById("cartBtn");
+  const cartMenu = document.getElementById("cartMenu");
+  const cartClose = document.getElementById("cartMenuClose")
+
+  cartBtn.addEventListener("click",function () {
+    cartMenu.classList.add("showCartMenu");
+    cartBtn.classList.add("moveCart");
+  })
+
+  cartClose.addEventListener("click",function () {
+    cartMenu.classList.remove("showCartMenu");
+    cartBtn.classList.remove("moveCart");
+  })
   

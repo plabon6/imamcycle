@@ -70,7 +70,7 @@
         </aside>
 
     </header>
-    <div class="cart">
+    <div class="cart" id="cartBtn">
         <i class="fa-solid fa-cart-shopping"></i>
         <span class="cartCount">
             10
@@ -192,6 +192,39 @@
             <label for="Offers">Account</label>
         </a>
     </nav>
+
+<!-- Offcanvas Cart -->
+<aside class="cartMenu" id="cartMenu">
+    <div class="cartHead">
+        <h3>Shopping Cart</h3>
+        <i id="cartMenuClose" class="fa-solid fa-xmark"></i>
+    </div>
+    <div id="cartList">
+        <ul>
+            <li>
+                <div>
+                    <img class="cartImage" src="./Assets/images/Bicycle_Frame.webp" alt="">
+                    <div>
+                        <h4 class="cartProTitle">Wissco 4X Bicycle MTB Frames</h4>
+                        <p class="cartProDetails">25000 X <span>1</span> = 25000</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-trash"></i>
+            </li>
+        </ul>
+    </div>
+    <div id="cartBottom">
+        <div id="total"><span>Total</span>25000</div>
+        <div class="couponCode">
+            <input type="text" placeholder="Enter Coupon Code">
+            <button>Apply</button>
+        </div>
+        <div id="grandTotal"><span>Grand Total</span>25000</div>
+        <button class="checkout">Checkout</button>
+    </div>
+</aside>
+
+
     <script type="module" src="./script.js"></script>
 </body>
 </html>
